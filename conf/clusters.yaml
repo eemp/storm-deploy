@@ -2,15 +2,20 @@
 # CLUSTERS CONFIG FILE
 ################################################################################
 
-nimbus.image: "us-east-1/ami-d726abbe"         #64-bit ubuntu
-nimbus.hardware: "m1.large"
+# some notes
+# t2.micro is not supported by org.jclouds
+# but t1.micro is
+# therefore, must use corresponding PV (paravirtualization?) AMIs (ami-b2e3c6d8)
 
-supervisor.count: 2
-supervisor.image: "us-east-1/ami-d726abbe"         #64-bit ubuntu on eu-east-1
-supervisor.hardware: "m1.large"
+nimbus.image: "us-east-1/ami-b2e3c6d8"         #64-bit ubuntu
+nimbus.hardware: "t1.micro"
+
+supervisor.count: 1
+supervisor.image: "us-east-1/ami-b2e3c6d8"         #64-bit ubuntu
+supervisor.hardware: "t1.micro"
 #supervisor.spot.price: 1.60
 
 
 zookeeper.count: 1
-zookeeper.image: "us-east-1/ami-d726abbe"         #64-bit ubuntu
-zookeeper.hardware: "m1.large"
+zookeeper.image: "us-east-1/ami-b2e3c6d8"         #64-bit ubuntu
+zookeeper.hardware: "t1.micro"
