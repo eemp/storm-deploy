@@ -11,5 +11,5 @@ YourKit is kindly supporting open source projects with its full-featured Java Pr
 * Updated default branch to `free-tier`
 * Updated conf/clusters.yaml to work with AWS free tier
  * 2 supervisor nodes => 1 supervisor node
- * set all instance types to `t1.micro` (`t2.micro` not supported by [`jclouds`](https://issues.apache.org/jira/browse/JCLOUDS-621)
+ * set all instance types to `t1.micro` (`t2.micro` not supported by [`jclouds`](https://issues.apache.org/jira/browse/JCLOUDS-621))
  * set all images to ubuntu-trusty-14.04-amd64-server-20160114.5 (`ami-b2e3c6d8`)
